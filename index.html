@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Milliseconds 'till Palooza</title>
+	<style>
+		* {
+			font-family: monospace; 
+			text-align: center; 
+			padding-left: 0;
+			padding-right: 0;
+		}
+		a {
+			color: rgb(182, 93, 63); 
+			text-decoration: none;
+		}
+		a:hover {
+			color: rgb(132, 43, 13);
+		}
+		.text {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h1 { 
+			font-size: 16vmin;
+			margin: auto;
+			text-align: center; 
+		}
+		h2 {
+			font-size: 9vmin;
+			text-align: center;
+			margin: auto;
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			var m = document.getElementById("mills");
+			var d = new Date("May 22, 2017 8:00:00");
+			var ref = d.getTime();
+			var cur = Date.now();
+			var diff = ref - cur;
+			
+			function hook() {
+				cur = Date.now();
+				diff = ref - cur;
+				m.innerHTML = diff;
+				window.setTimeout(hook, 1000/120);
+			}
+
+			hook();
+		}
+	</script>
+</head>
+
+<div style="min-width: 60vw; margin: auto; margin-top: 30vh; height: 40vh; text-align: center; padding: 0;">
+	<h1 id="mills"></h1>
+	<h2>milliseconds until <span style="font-weight: bold; font-size: 12vmin;"><a href="http://puzzlepalooza.mbhs.edu">PuzzlePalooza</a></span></h2>
+</div>
+
+</html>
