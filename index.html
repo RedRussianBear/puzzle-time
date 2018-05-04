@@ -19,6 +19,9 @@ mkhrenov34@gmail.com
 			padding-left: 0;
 			padding-right: 0;
 		}
+		body {
+			color: rgb(52, 38, 213);
+		}
 		a {
 			color: rgb(254, 126, 53); 
 			text-decoration: none;
@@ -34,13 +37,11 @@ mkhrenov34@gmail.com
 			font-size: 16vmin;
 			margin: auto;
 			text-align: center;
-			color: rgb(52, 38, 213);
 		}
 		h2 {
 			font-size: 9vmin;
 			text-align: center;
 			margin: auto;
-			color: rgb(52, 38, 213);
 		}
 		
 		#toggle {
@@ -66,6 +67,7 @@ mkhrenov34@gmail.com
 			m = document.getElementById("mills");
 			t = document.getElementById("tagline");
 			sub = document.getElementById("sub");
+			text_color = "rgb(52, 38, 213)";
 			
 			function chook() {
 				cur = Date.now();
@@ -88,7 +90,7 @@ mkhrenov34@gmail.com
 				toggle();
 				toggle();
 				sub.innerHTML = "(stay hyped)";
-				document.body.style.color = "black";
+				document.body.style.color = text_color;
 				document.body.style.background = "white";
 				document.title = "Palooza Time!";
 				window.setTimeout(chook, 1000/120);
@@ -101,18 +103,18 @@ mkhrenov34@gmail.com
 				if(s) {
 					s = false;
 					document.body.style.color = "white";
-					document.body.style.background = "black";
+					document.body.style.background = text_color;
 				}
 				else {
 					s = true;
-					document.body.style.color = "black";
+					document.body.style.color = text_color;
 					document.body.style.background = "white";
 				}
 				
 				if(diff > -15000) window.setTimeout(hhook, 250);
 				else {
 					document.body.style.color = "white";
-					document.body.style.background = "black";
+					document.body.style.background = text_color;
 					t.innerHTML = "";
 					sub.innerHTML = "";
 					
