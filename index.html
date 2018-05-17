@@ -52,7 +52,7 @@ mkhrenov34@gmail.com
 	</style>
 	<script>
 		var d0 = new Date("May 21, 2018 7:45:00");
-		var d1 = new Date("May 24, 2018 11:07:00");
+		var d1 = new Date("May 24, 2018 10:30:00");
 		var begin = d0.getTime();
 		var end = d1.getTime();
 		var cur = Date.now();
@@ -83,7 +83,11 @@ mkhrenov34@gmail.com
 				}
 				else m.innerHTML = left;
 				if(left > 0) window.setTimeout(chook, 1000/120);
-				//else window.setTimeout(ehook, 500);
+				else {
+					begin += 1000 * 60 * 60 * 24 * 365;
+					end += 1000 * 60 * 60 * 24 * 365;
+					window.setTimeout(chook, 1000*7200);
+				}
 			}
 			
 			function start() {
