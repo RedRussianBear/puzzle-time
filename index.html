@@ -58,6 +58,12 @@ mkhrenov34@gmail.com
 		var cur = Date.now();
 		var diff = begin - cur;
 		var left = end - cur;
+		if(left < -1000*7200) {
+			begin += 1000 * 60 * 60 * 24 * 365;
+			end += 1000 * 60 * 60 * 24 * 365;
+			diff = begin - cur;
+			left = end - cur;
+		}
 		var format = false;
 		var t, m, sub;
 		
