@@ -20,14 +20,14 @@ mkhrenov34@gmail.com
 			padding-right: 0;
 		}
 		body {
-			color: rgb(136, 8, 8);
+			color: #4f6bad;
 		}
 		a {
-			color: rgb(0, 0, 0); 
+			color: #ffffff; 
 			text-decoration: none;
 		}
 		a:hover {
-			color: rgb(136,8,8);
+			color: #4f6bad;
 		}
 		.text {
 			margin-left: auto;
@@ -51,8 +51,8 @@ mkhrenov34@gmail.com
 		}
 	</style>
 	<script>
-		var d0 = new Date("May 24, 2023 7:45:00");
-		var d1 = new Date("May 25, 2023 15:20:00");
+		var d0 = new Date("May 30, 2024 8:00:00");
+		var d1 = new Date("May 31, 2024 15:30:00");
 		var begin = d0.getTime();
 		var end = d1.getTime();
 		var cur = Date.now();
@@ -104,7 +104,7 @@ mkhrenov34@gmail.com
 				toggle();
 				sub.innerHTML = "(stay hyped)";
 				document.body.style.color = text_color;
-				document.body.style.background = "white";
+				document.body.style.background = "black";
 				document.title = "Palooza Time!";
 				window.setTimeout(chook, 1000/120);
 			}
@@ -115,18 +115,18 @@ mkhrenov34@gmail.com
 				
 				if(s) {
 					s = false;
-					document.body.style.color = "white";
+					document.body.style.color = "black";
 					document.body.style.background = text_color;
 				}
 				else {
 					s = true;
 					document.body.style.color = text_color;
-					document.body.style.background = "white";
+					document.body.style.background = "black";
 				}
 				
 				if(diff > -15000) window.setTimeout(hhook, 250);
 				else {
-					document.body.style.color = "white";
+					document.body.style.color = "black";
 					document.body.style.background = text_color;
 					t.innerHTML = "";
 					sub.innerHTML = "";
